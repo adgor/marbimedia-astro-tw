@@ -7,6 +7,7 @@ import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://marbimedia.netlify.app/",
   integrations: [tailwind(), mdx(), react(), image()],
   vite: {
     ssr: {
