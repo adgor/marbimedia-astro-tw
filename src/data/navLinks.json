@@ -1,0 +1,18 @@
+[
+    {
+        "title": "portfolio",
+        "url": "/portfolio"
+    },
+    {
+        "title": "about",
+        "url": "/about"
+    },
+    {
+        "title": "open source",
+        "url": "/open-source"
+    },
+    {
+        "title": "contact",
+        "url": "/about#contact"
+    }
+]
