@@ -1,0 +1,17 @@
+[
+    {
+        "url": "https://facebook.com/",
+        "description": "B&L Immobilien AG on Facebook",
+        "icon": "fa-brands:facebook-square"
+    },
+    {
+        "url": "https://instagram.com/",
+        "description": "B&L Immobilien AG on Instagram",
+        "icon": "fa-brands:instagram-square"
+    },
+    {
+        "url": "https://twitter.com/",
+        "description": "B&L Immobilien AG on Twitter",
+        "icon": "fa-brands:twitter"
+    }
+]

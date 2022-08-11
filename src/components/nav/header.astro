@@ -4,6 +4,7 @@ import { Icon } from "astro-icon";
 
 import navLinks from "~/data/navLinks.json";
 import serviceNavLinks from "~/data/serviceNavLinks.json";
+import socialNavLinks from "~/data/socialNavLinks.json"
 ---
 
 <header id="page-header"
@@ -74,16 +75,40 @@ import serviceNavLinks from "~/data/serviceNavLinks.json";
                     <div class="flex justify-center">
                         <!-- <Icon name="logomark" class="h-16" /> -->
                     </div>
-                    <nav>
-                        <ul class="flex flex-col">
+                    <nav class=" px-20 flex flex-col ">
+                        <ul class="flex capitalize mx-auto flex-col">
+                            <li>
+                                <a class="block py-2 text-xl " href='/'>
+                                    home
+                                </a>
+                            </li>
+                            {serviceNavLinks.map(({ title, url }) => (
+                            <li>
+                                <a class="block py-2 text-xl " href={url}>
+                                    {title}
+                                </a>
+                            </li>
+                            ))}
+
+                            <div class=" h-0.5 my-6 border-gray-800 border-b"></div>
                             {navLinks.map(({ title, url }) => (
                             <li>
-                                <a class="block py-4 text-xl text-center" href={url}>
+                                <a class="block py-2 text-xl " href={url}>
                                     {title}
                                 </a>
                             </li>
                             ))}
                         </ul>
+                        <div class=" pt-20 flex space-x-6  mx-auto ">
+
+                            {socialNavLinks.map((link) => (
+                            <a class="text-gray-300 transition-colors duration-300 hover:text-white" href={link.url}>
+                                <span class="sr-only">{link.description}</span>
+                                <Icon class="h-7 w-7" name={link.icon} />
+                            </a>
+
+                            ))}
+                        </div>
                     </nav>
                 </div>
             </div>
