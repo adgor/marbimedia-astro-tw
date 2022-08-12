@@ -9,7 +9,7 @@ import socialNavLinks from "~/data/socialNavLinks.json"
 ---
 
 <header id="page-header"
-    class="  z-10 bg-brand-richBlack flex items-center justify-between w-full px-8 py-5 border-b border-transparent">
+    class=" absolute  z-10 bg-brand-richBlack flex items-center justify-between w-full px-8 py-5 border-b border-transparent">
     <a class="flex items-center gap-3 hover:!text-default" href="/">
         <h1 class="sr-only"><b>Marbi</b>Media</h1>
         <Icon name="logo" class="h-10" />
@@ -64,15 +64,15 @@ import socialNavLinks from "~/data/socialNavLinks.json"
                     ))}
                 </ul>
             </nav>
-            <button id="open-nav-button" type="button" class="btn sm:hidden" aria-label="Navigation">
+            <button id="open-nav-button" type="button" class="btn text-white sm:hidden" aria-label="Navigation">
                 <Icon pack="mdi" name="menu" class="h-8" />
             </button>
             <!-- <ThemeSwitcher /> -->
         </div>
         <div id="menu-modal" class="hidden modal" aria-hidden="true">
-            <div class="inset-0 px-8 py-4 bg-default">
+            <div class="fixed inset-0 px-8 py-4 bg-brand-richBlack bg-default">
                 <div class="space-y-4" role="dialog" aria-modal="true">
-                    <header class="text-right">
+                    <header class="text-right text-gray-500">
                         <button id="close-nav-button" type="button" class="btn" aria-label="Close navigation">
                             <Icon pack="mdi" name="close" class="h-8" />
                         </button>
@@ -81,7 +81,7 @@ import socialNavLinks from "~/data/socialNavLinks.json"
                         <Icon name="logo" class="h-16 mb-4" />
                     </div>
                     <nav class=" px-20 flex flex-col ">
-                        <ul class="flex capitalize mx-auto flex-col">
+                        <ul class="flex text-gray-300 capitalize mx-auto flex-col">
                             <li>
                                 <a class="block py-2 text-xl " href='/'>
                                     home
@@ -107,7 +107,7 @@ import socialNavLinks from "~/data/socialNavLinks.json"
                         <div class=" pt-20 flex space-x-6  mx-auto ">
 
                             {socialNavLinks.map((link) => (
-                            <a class="text-gray-300 transition-colors duration-300 hover:text-white" href={link.url}>
+                            <a class="text-gray-500 transition-colors duration-300 hover:text-white" href={link.url}>
                                 <span class="sr-only">{link.description}</span>
                                 <Icon class="h-7 w-7" name={link.icon} />
                             </a>

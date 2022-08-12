@@ -10,18 +10,17 @@ const currentYear = new Date().getFullYear()
         <div class="container grid grid-cols-1 md:grid-cols-3 px-4 text-center">
             <div class="flex space-x-4 items-center justify-center  md:justify-start">
                 {socialNavLinks.map((link) => (
-                <a class="text-gray-300 transition-colors duration-300 hover:text-white" href={link.url}>
+                <a class="text-gray-500 transition-colors duration-300 hover:text-white" href={link.url}>
                     <span class="sr-only">{link.description}</span>
                     <Icon class="h-5 w-5" name={link.icon} />
                 </a>
                 ))}
-
             </div>
             <a href="/" aria-label="Go home" title="Company"
                 class="flex order-first md:order-none items-center justify-center  md:mb-0 mb-8">
                 <Icon name="logo" class=" h-10 w-16 " />
             </a>
-            <div class=" flex space-x-4 items-center justify-center  mt-2 md:mt-0 md:justify-end text-gray-600">
+            <div class=" flex space-x-4 items-center justify-center  mt-2 md:mt-0 md:justify-end text-gray-500">
                 <p>© {currentYear}. All rights reserved.</p>
             </div>
         </div>

@@ -1,17 +1,17 @@
 [
-    {
-        "title": "websites & web apps",
-        "category": "services",
-        "url": "/services/web"
-    },
-    {
-        "title": "ux & ui design",
-        "category": "services",
-        "url": "/services/design"
-    },
-    {
-        "title": "project idea",
-        "category": "services",
-        "url": "/services/project-idea"
-    }
+  {
+    "title": "websites & web apps",
+    "category": "services",
+    "url": "/web"
+  },
+  {
+    "title": "ux & ui design",
+    "category": "services",
+    "url": "/design"
+  },
+  {
+    "title": "project idea",
+    "category": "services",
+    "url": "/project-idea"
+  }
 ]

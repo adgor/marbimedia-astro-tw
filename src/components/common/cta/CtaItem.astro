@@ -1,0 +1,50 @@
+---
+import Icon from "astro-icon";
+import Button from "../Button.astro";
+
+export interface Props {
+    bgStyle: string;
+    ctaTitleFirst: string;
+    ctaTitleSecond: string;
+    ctaDesc: string;
+    titleStyle: string;
+    descStyle: string;
+    btnLink: string;
+    btnStyle: string;
+    btnText: string;
+    btnColorStyle: string;
+}
+const {
+    bgStyle = ``,
+    ctaTitleFirst = ``,
+    ctaTitleSecond = ``,
+    ctaDesc = ``,
+    titleStyle = ``,
+    descStyle = ``,
+    btnLink = ``,
+    btnStyle = ``,
+    btnText = ``,
+} = Astro.props;
+
+---
+
+<section class={bgStyle}>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="flex items-center justify-between">
+            <div class="space-y-5 ">
+                <h2 class={`${titleStyle} text-2xl`}>
+                    {ctaTitleFirst}
+                    <br />
+                    {ctaTitleSecond}
+                </h2>
+                <p class={`${descStyle}`}>
+                    {ctaDesc}
+                </p>
+            </div>
+
+            <Button btnColorStyle={btnStyle} link={btnLink}>
+                {btnText}
+            </Button>
+        </div>
+    </div>
+</section>

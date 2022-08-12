@@ -2,6 +2,7 @@
 // Component Imports
 import MainLayout from '~/layouts/MainLayout.astro';
 import Hero from '~/components/home/Hero.astro';
+import CtaLight from '~/components/common/cta/CtaLight.astro';
 
 // Props
 let title = 'home',
@@ -10,4 +11,5 @@ let title = 'home',
 
 <MainLayout title={title} description={description}>
 	<Hero />
+	<CtaLight />
 </MainLayout>

@@ -1,45 +1,53 @@
 ---
 import Button from "../common/Button.astro";
-let btnLink = '/#contact'
 
+export interface Props {
+    padTop: string;
+}
+
+const padTop = 'pt-20'
+
+let btnLink = '/#contact'
 ---
 
-<div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-    <div class="grid gap-10 lg:grid-cols-2">
-        <div class="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
-            <div class="max-w-xl mb-8">
-                <h2 class="max-w-lg mb-6 text-3xl font-bold leading-none text-brand-gunmetal sm:text-5xl">
-                    We bring
-                    <br />
-                    <span class=" text-brand-purple">Projects</span> to Life
-                </h2>
-                <p class="max-w-xs text-base leading-7 text-brand-charcoal md:text-lg">
-                    MarbiMedia is a digital agency designing and developing the best
-                    websites, projects and experiences.
-                </p>
+<section class={padTop}>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="grid gap-10 lg:grid-cols-2">
+            <div class="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
+                <div class="max-w-xl mb-8">
+                    <h2 class="max-w-lg mb-6 text-3xl font-bold leading-none text-brand-gunmetal sm:text-5xl">
+                        We bring
+                        <br />
+                        <span class=" text-brand-purple">Projects</span> to Life
+                    </h2>
+                    <p class="max-w-xs text-base leading-7 text-brand-charcoal md:text-lg">
+                        MarbiMedia is a digital agency designing and developing the best
+                        websites, projects and experiences.
+                    </p>
+                </div>
+                <div>
+                    <Button link={btnLink}>
+                        let's work together
+                    </Button>
+                </div>
             </div>
-            <div>
-                <Button link={btnLink}>
-                    let's work together
-                </Button>
-            </div>
-        </div>
 
-        <div class="flex items-center justify-center -mx-4 lg:pl-8">
-            <div class="flex flex-col items-end px-3">
-                <img class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
-                    src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    alt="" />
-                <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
-                    src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-                    alt="" />
+            <div class="flex items-center justify-center -mx-4 lg:pl-8">
+                <div class="flex flex-col items-end px-3">
+                    <img class="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
+                        src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                        alt="" />
+                    <img class="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
+                        src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                        alt="" />
+                </div>
+                <div class="px-3">
+                    <img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
+                        src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
+                        alt="" />
+                </div>
             </div>
-            <div class="px-3">
-                <img class="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
-                    src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
-                    alt="" />
-            </div>
-        </div>
 
+        </div>
     </div>
-</div>
+</section>
