@@ -2,7 +2,8 @@
 // Component Imports
 import MainLayout from '~/layouts/MainLayout.astro';
 import Hero from '~/components/home/Hero.astro';
-import CtaLight from '~/components/common/cta/CtaLight.astro';
+import CtaItem from '~/components/common/cta/CtaItem.astro';
+import TrustedLogos from '~/components/common/cta/TrustedLogos.astro';
 
 // Props
 let title = 'home',
@@ -11,5 +12,20 @@ let title = 'home',
 
 <MainLayout title={title} description={description}>
 	<Hero />
-	<CtaLight />
+
+	<CtaItem btnLink="#services" btnStyle="bg-brand-culturedDark text-brand-charcoal" bgStyle="bg-brand-cultured"
+		titleStyle="text-brand-gunmetal sm:text-3xl font-semibold leading-9"
+		descStyle="text-brand-charcoal text-base max-w-md" ctaTitleFirst="Customers are looking for you online."
+		ctaTitleSecond="We’ll help them find you."
+		ctaDesc="MarbiMedia is a digital agency built around passion and results. We help ambitious business of small and medium sizes to generate more revenue and growth."
+		btnText="learn more" />
+
+	<TrustedLogos />
+
+	<CtaItem btnLink="#contact" btnStyle="bg-brand-charcoal text-brand-cultured" btnText="contact us"
+		bgStyle="bg-brand-gunmetal" titleStyle="text-brand-cultured sm:text-5xl font-bold"
+		descStyle="text-brand-text text-lg max-w-xl" ctaTitleFirst="Let’s bring your business"
+		ctaTitleSecond="noticable online"
+		ctaDesc="We create advanced websites. Effective, attractive & simply unique." />
+
 </MainLayout>
