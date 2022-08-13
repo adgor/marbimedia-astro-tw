@@ -1,17 +1,33 @@
 ---
 // Component Imports
-import MainLayout from '~/layouts/MainLayout.astro';
-import Hero from '~/components/home/Hero.astro';
-import CtaItem from '~/components/common/cta/CtaItem.astro';
-import TrustedLogos from '~/components/common/cta/TrustedLogos.astro';
+import MainLayout from "~/layouts/MainLayout.astro";
+import Hero from "~/components/home/Hero.astro";
+import CtaItem from "~/components/common/cta/CtaItem.astro";
+import TrustedLogos from "~/components/common/TrustedLogos.astro";
+import ServiceItem from "~/components/common/service/ServiceItem.astro";
 
 // Props
-let title = 'home',
-	description = 'MarbiMedia is a digital agency designing and developing the best websites, projects and experiences.'
+let title = "home",
+	description =
+		"MarbiMedia is a digital agency designing and developing the best websites, projects and experiences.";
+
+let secStyle = "pt-20 bg-brand-richBlack";
 ---
 
 <MainLayout title={title} description={description}>
-	<Hero />
+	<Hero secStyle={secStyle}>
+		<div class="max-w-xl mb-8" slot="heading">
+			<h2 class="max-w-lg mb-6 text-3xl font-bold leading-none text-brand-culturedDark    sm:text-5xl">
+				We bring
+				<br />
+				<span class=" text-brand-purple">Projects</span> to Life
+			</h2>
+			<p class="max-w-lg text-base leading-7 text-brand-text  md:text-lg">
+				MarbiMedia is a digital agency designing and developing the best
+				websites, projects and experiences.
+			</p>
+		</div>
+	</Hero>
 
 	<CtaItem btnLink="#services" btnStyle="bg-brand-culturedDark text-brand-charcoal" bgStyle="bg-brand-cultured"
 		titleStyle="text-brand-gunmetal sm:text-3xl font-semibold leading-9"
@@ -20,6 +36,40 @@ let title = 'home',
 		ctaDesc="MarbiMedia is a digital agency built around passion and results. We help ambitious business of small and medium sizes to generate more revenue and growth."
 		btnText="learn more" />
 
+	<section id="services">
+
+		<ServiceItem serviceText="WEBSITES & WEB APPS" serviceTitleFirst="We build JAMstack"
+			serviceTitleSecond="experiences."
+			serviceDesc="We use JAMstack architecture, which is the modern way to build Websites and Apps that delivers better performance, security, and scaling."
+			itemFirstTitle="high-performance"
+			itemFirstDesc="Statically generated websites and apps are faster. Dont't wait for a server to build- deploy your apps onto a CDN."
+			itemSecondTitle="more secure"
+			itemSecondDesc="By transforming server-side process into serverless functions, the surface area for vulnerabilities is reduces."
+			serviceImg="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+			btnLink="/web" btnColorStyle=" bg-brand-culturedDark" />
+
+		<ServiceItem bgStyle="bg-brand-cultured" serviceText="UX & UI DESIGN" serviceTitleFirst="Design is"
+			serviceTitleSecond="how it works."
+			serviceDesc="We provide the smart design, backed by the right technology, as the basis for the most impressive user experiences."
+			itemFirstTitle="user-first"
+			itemFirstDesc="Users always come first in every interaction, which means extensive user research is a must."
+			itemSecondTitle="dissciplined"
+			itemSecondDesc="We follow solid principles to design products that stay attractive and usable for years to come."
+			serviceImg="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+			btnLink="/design" btnColorStyle=" bg-brand-culturedDark" />
+
+		<ServiceItem serviceText="project idea" serviceTitleFirst="Plan, build, and manage"
+			serviceTitleSecond="your project."
+			serviceDesc="Cloud is an opportunity to reimagine everything with infinite potential. We help organizations confidently discover what’s possible."
+			itemFirstTitle="user-first"
+			itemFirstDesc="Users always come first in every interaction, which means extensive user research is a must."
+			itemSecondTitle="dissciplined"
+			itemSecondDesc="We follow solid principles to design products that stay attractive and usable for years to come."
+			serviceImg="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
+			btnLink="/project-idea" btnColorStyle=" bg-brand-culturedDark" />
+
+	</section>
+
 	<TrustedLogos />
 
 	<CtaItem btnLink="#contact" btnStyle="bg-brand-charcoal text-brand-cultured" btnText="contact us"
@@ -27,5 +77,4 @@ let title = 'home',
 		descStyle="text-brand-text text-lg max-w-xl" ctaTitleFirst="Let’s bring your business"
 		ctaTitleSecond="noticable online"
 		ctaDesc="We create advanced websites. Effective, attractive & simply unique." />
-
 </MainLayout>

@@ -1,0 +1,88 @@
+---
+import Button from "../Button.astro";
+
+export interface Props {
+    bgStyle: string;
+    serviceText: string;
+    serviceTitleFirst: string;
+    serviceTitleSecond: string;
+    serviceDesc: string;
+    itemFirstTitle: string;
+    itemFirstDesc: string;
+    itemSecondTitle: string;
+    itemSecondDesc: string;
+    serviceImg: string;
+    serviceImgAlt: string;
+    btnColorStyle: string;
+    btnLink: string;
+}
+
+const {
+    bgStyle,
+    serviceText,
+    serviceTitleFirst,
+    serviceTitleSecond,
+    serviceDesc,
+    itemFirstTitle,
+    itemFirstDesc,
+    itemSecondTitle,
+    itemSecondDesc,
+    serviceImg,
+    serviceImgAlt,
+    btnColorStyle,
+    btnLink,
+} = Astro.props
+---
+
+<section class={`${bgStyle}`}>
+
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
+            <div class="flex flex-col justify-center">
+                <div class="max-w-xl text-brand-gunmetal  mb-6">
+                    <p class="mb-2 text-sm font-semibold leading-5 uppercase ">
+                        {serviceText}
+                    </p>
+                    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">
+                        {serviceTitleFirst}
+                        <br class="hidden md:block" />
+                        {serviceTitleSecond}
+                    </h2>
+                    <p class="text-base text-brand-charcoal md:text-lg">
+                        {serviceDesc}
+                    </p>
+                </div>
+                <div class=" text-brand-gunmetal grid gap-5 row-gap-8 sm:grid-cols-2">
+                    <div class=" border-l-4 shadow-sm border-brand-purple">
+                        <div class="h-full p-5 border border-l-0 rounded-r">
+                            <h6 class="mb-2 uppercase font-semibold leading-5">
+                                {itemFirstTitle}
+                            </h6>
+                            <p class="text-sm text-brand-charcoal ">
+                                {itemFirstDesc}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="border-l-4 shadow-sm border-brand-purple">
+                        <div class="h-full p-5 border border-l-0 rounded-r">
+                            <h6 class="mb-2 font-semibold uppercase leading-5">
+                                {itemSecondTitle}
+                            </h6>
+                            <p class="text-sm text-brand-charcoal">
+                                {itemSecondDesc}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class=" mt-8">
+                    <Button link={btnLink} btnColorStyle={btnColorStyle}>
+                        learn more
+                    </Button>
+                </div>
+            </div>
+            <div>
+                <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96" src={serviceImg} alt={serviceImgAlt} />
+            </div>
+        </div>
+    </div>
+</section>

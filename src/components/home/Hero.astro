@@ -2,29 +2,19 @@
 import Button from "../common/Button.astro";
 
 export interface Props {
-    padTop?: string;
+    secStyle: string;
 }
 
-const padTop = 'pt-20'
+const { secStyle = 'mt-20' } = Astro.props;
 
 let btnLink = '/#contact'
 ---
 
-<section class={padTop}>
+<section class={secStyle}>
     <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div class="grid gap-10 lg:grid-cols-2">
             <div class="flex flex-col justify-center md:pr-8 xl:pr-0 lg:max-w-lg">
-                <div class="max-w-xl mb-8">
-                    <h2 class="max-w-lg mb-6 text-3xl font-bold leading-none text-brand-gunmetal sm:text-5xl">
-                        We bring
-                        <br />
-                        <span class=" text-brand-purple">Projects</span> to Life
-                    </h2>
-                    <p class="max-w-xs text-base leading-7 text-brand-charcoal md:text-lg">
-                        MarbiMedia is a digital agency designing and developing the best
-                        websites, projects and experiences.
-                    </p>
-                </div>
+                <slot name='heading' />
                 <div>
                     <Button link={btnLink}>
                         let's work together
