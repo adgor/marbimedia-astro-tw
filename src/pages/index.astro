@@ -5,10 +5,12 @@ import Hero from "~/components/home/Hero.astro";
 import CtaItem from "~/components/common/cta/CtaItem.astro";
 import TrustedLogos from "~/components/common/TrustedLogos.astro";
 import ServiceItem from "~/components/common/service/ServiceItem.astro";
+import ContactSection from "~/components/common/contact/ContactSection.astro";
 
 // Props
 let title = "home";
-let description = "MarbiMedia is a digital agency designing and developing the best websites, projects and experiences.";
+let description =
+	"MarbiMedia is a digital agency designing and developing the best websites, projects and experiences.";
 let secStyle = "pt-20 bg-brand-richBlack";
 ---
 
@@ -35,7 +37,6 @@ let secStyle = "pt-20 bg-brand-richBlack";
 		btnText="learn more" />
 
 	<section id="services">
-
 		<ServiceItem serviceText="WEBSITES & WEB APPS" serviceTitleFirst="We build JAMstack"
 			serviceTitleSecond="experiences."
 			serviceDesc="We use JAMstack architecture, which is the modern way to build Websites and Apps that delivers better performance, security, and scaling."
@@ -65,7 +66,6 @@ let secStyle = "pt-20 bg-brand-richBlack";
 			itemSecondDesc="We follow solid principles to design products that stay attractive and usable for years to come."
 			serviceImg="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
 			btnLink="/project-idea" btnColorStyle=" bg-brand-culturedDark" />
-
 	</section>
 
 	<TrustedLogos />
@@ -75,4 +75,7 @@ let secStyle = "pt-20 bg-brand-richBlack";
 		descStyle="text-brand-text text-lg max-w-xl" ctaTitleFirst="Let’s bring your business"
 		ctaTitleSecond="noticable online"
 		ctaDesc="We create advanced websites. Effective, attractive & simply unique." />
+
+	<ContactSection />
+
 </MainLayout>
