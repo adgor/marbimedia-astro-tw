@@ -3,12 +3,14 @@ import Icon from "astro-icon";
 
 export interface Props {
 	btnColorStyle?: string;
+	iconSpan?: string;
 	iconName?: string;
 	link: string;
 }
 
 const {
 	btnColorStyle = "bg-brand-purple text-brand-culturedDark hover:text-white",
+	iconSpan,
 	iconName = 'ic:twotone-arrow-right-alt',
 	link,
 } = Astro.props;
@@ -17,7 +19,7 @@ const {
 <a href={link} class={`inline-flex items-center px-8 py-4 text-xs font-bold duration-700 leading-4 transition-colors
 	uppercase rounded-lg group ${btnColorStyle }`}>
 	<slot />
-	<span class="flex items-center ml-2 ">
+	<span class={`flex items-center ml-2 ${iconSpan}`}>
 		<Icon name={iconName} class=' h-5 w-5 duration-500 transform group-hover:translate-x-1' />
 	</span>
 </a>

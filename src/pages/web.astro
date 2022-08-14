@@ -1,12 +1,33 @@
 ---
+import ContactSection from '~/components/common/contact/ContactSection.astro';
+import HeroPages from '~/components/common/HeroPages.astro';
 import MainLayout from '~/layouts/MainLayout.astro';
 
 let title = "title",
-    description = "description"
+    description = "description",
+    heroImg = "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
 ---
 
 <MainLayout title={title} description={description}>
-    <div class=" py-32">
-        <h1>TODO </h1>
-    </div>
+    <HeroPages heroImg={heroImg}>
+        <h2 slot="title" class=" uppercase mb-20 tracking-widest  font-light text-white text-3xl  sm:text-5xl">
+            We build JAMstack
+            <br />
+            experiences.
+        </h2>
+        <div slot="heading" class=" relative max-w-md  text-white mb-6">
+
+            <div>
+                <p class="inline-block pb-7 text-2xl font-medium  uppercase">
+                    WEBSITES & WEB APPS
+                </p>
+            </div>
+            <p class="text-base tracking-wide text-brand-text pb-4 md:text-lg">
+                We use JAMstack architecture, which is the modern way to build Websites and Apps that delivers
+                better performance, security, and scaling.
+            </p>
+        </div>
+    </HeroPages>
+
+    <ContactSection />
 </MainLayout>
