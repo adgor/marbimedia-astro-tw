@@ -1,12 +1,37 @@
 ---
+import ContactSection from '~/components/common/contact/ContactSection.astro';
+import CtaCenter from '~/components/common/cta/CtaCenter.astro';
+import HeroPages from '~/components/common/HeroPages.astro';
+import Capabilities from '~/components/project/Capabilities.astro';
 import MainLayout from '~/layouts/MainLayout.astro';
 
 let title = "title",
-    description = "description"
+    description = "description",
+    heroImg = "https://images.pexels.com/photos/4792282/pexels-photo-4792282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
 ---
 
 <MainLayout title={title} description={description}>
-    <div class=" py-32">
-        <h1>TODO </h1>
-    </div>
+
+    <HeroPages heroImg={heroImg}>
+        <h2 slot="title" class=" uppercase mb-20 tracking-widest  font-light text-white text-3xl  sm:text-5xl">
+            Digital Experiences,
+            <br />
+            Made Better.
+        </h2>
+        <div slot="heading" class=" relative max-w-md  text-white mb-6">
+
+            <div>
+                <p class="inline-block pb-7 text-2xl font-medium  uppercase">
+                    PROJECT IDEA
+                </p>
+            </div>
+            <p class="text-base tracking-wide text-brand-text pb-4 md:text-lg">
+                Plan, build, and manage
+                your project.
+            </p>
+        </div>
+    </HeroPages>
+    <Capabilities />
+    <CtaCenter />
+    <ContactSection />
 </MainLayout>

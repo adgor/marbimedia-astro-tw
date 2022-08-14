@@ -1,0 +1,46 @@
+[
+  {
+    "title": "digital strategy",
+    "capabilities": [
+      "Consumer Research",
+      "Competitive Analysis",
+      "UX Audit",
+      "Product Strategy",
+      "Brand Strategy",
+      "Marketing Strategy"
+    ]
+  },
+  {
+    "title": "Branding",
+    "capabilities": [
+      "Brand Identity",
+      "Art Direction",
+      "Logo Design",
+      "Iconography",
+      "Illustration",
+      "Animation"
+    ]
+  },
+  {
+    "title": "design",
+    "capabilities": [
+      "UI/UX Design",
+      "Website Design",
+      "Website Development",
+      "Mobile App Design",
+      "Packaging Design",
+      "Graphic Design"
+    ]
+  },
+  {
+    "title": "technology",
+    "capabilities": [
+      "jamstack websites",
+      "apps & data",
+      "ecommerce",
+      "consultant",
+      "partner",
+      "manager"
+    ]
+  }
+]
