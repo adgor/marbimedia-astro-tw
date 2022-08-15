@@ -2,6 +2,7 @@
 import ContactSection from '~/components/common/contact/ContactSection.astro';
 import CtaCenter from '~/components/common/cta/CtaCenter.astro';
 import HeroPages from '~/components/common/HeroPages.astro';
+import ProductItem from '~/components/common/products/ProductItem.astro';
 import MainLayout from '~/layouts/MainLayout.astro';
 
 let title = "title",
@@ -31,6 +32,11 @@ let title = "title",
         </div>
     </HeroPages>
 
+    <section id="projects">
+        <ProductItem title='Jamstack Websites'
+            body="We build Jamstack websites and apps to meet the specific needs of your business that off-the-shelf software can't. Jamstack is not a technology or a product. It's a way of thinking that moves the web forward, making it secure, faster, and easier to scale."
+            products="UI, UX, Dev" />
+    </section>
     <CtaCenter />
     <ContactSection />
 </MainLayout>
