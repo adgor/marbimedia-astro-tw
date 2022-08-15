@@ -7,12 +7,14 @@ import MainLayout from '~/layouts/MainLayout.astro';
 
 let title = "title",
     description = "description",
-    heroImg = "https://images.pexels.com/photos/4792282/pexels-photo-4792282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    heroImg = "https://images.pexels.com/photos/4792282/pexels-photo-4792282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    pattern = 'pattern-project'
+
 ---
 
 <MainLayout title={title} description={description}>
 
-    <HeroPages heroImg={heroImg}>
+    <HeroPages heroImg={heroImg} pattern={pattern}>
         <h2 slot="title" class=" uppercase mb-20 tracking-widest  font-light text-white text-3xl  sm:text-5xl">
             Digital Experiences,
             <br />

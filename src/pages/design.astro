@@ -1,12 +1,31 @@
 ---
+import HeroPages from '~/components/common/HeroPages.astro';
 import MainLayout from '~/layouts/MainLayout.astro';
 
 let title = "title",
-    description = "description"
+    description = "description",
+    heroImg = 'https://cdn.pixabay.com/photo/2016/12/06/01/26/colour-1885352_960_720.jpg',
+    pattern = "pattern-design"
 ---
 
 <MainLayout title={title} description={description}>
-    <div class=" py-32">
-        <h1>TODO </h1>
-    </div>
+    <HeroPages heroImg={heroImg} pattern={pattern}>
+        <h2 slot="title" class=" uppercase mb-20 tracking-widest  font-light text-white text-3xl  sm:text-5xl">
+            Design is
+            <br />
+            how it works.
+        </h2>
+        <div slot="heading" class=" relative max-w-md  text-white mb-6">
+
+            <div>
+                <p class="inline-block pb-7 text-2xl font-medium  uppercase">
+                    UX & UI DESIGN
+                </p>
+            </div>
+            <p class="text-base tracking-wide text-brand-text pb-4 md:text-lg">
+                We provide the smart design, backed by the right technology, as the basis for the most impressive user
+                experiences.
+            </p>
+        </div>
+    </HeroPages>
 </MainLayout>
