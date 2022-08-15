@@ -1,15 +1,14 @@
 ---
 import Button from "./Button.astro";
 
-let btnContact = '/web#contact'
-let btnProducts = '/web#products'
-
 export interface Props {
     heroImg: string;
     pattern: string;
+    linkContact: string;
+    linkProducts: string;
 }
 
-const { heroImg, pattern } = Astro.props
+const { heroImg, pattern, linkContact, linkProducts } = Astro.props
 ---
 
 <header class={`bg-brand-richBlack pt-20 ${pattern}`}>
@@ -19,10 +18,11 @@ const { heroImg, pattern } = Astro.props
             <div class="mb-auto lg:max-w-lg lg:pr-28">
                 <slot name="heading" />
                 <div class="flex flex-col space-x-1 items-center md:flex-row">
-                    <Button iconSpan=" hidden" link={btnContact}>
+                    <Button iconSpan=" hidden" link={linkContact}>
                         get started
                     </Button>
-                    <Button iconSpan=" hidden" btnColorStyle=" bg-transparent text-white capitalize" link={btnProducts}>
+                    <Button iconSpan=" hidden" btnColorStyle=" bg-transparent text-white capitalize"
+                        link={linkProducts}>
                         learn more
                     </Button>
                 </div>
