@@ -1,17 +1,17 @@
 ---
+import ContactSection from '~/components/common/contact/ContactSection.astro';
+import CtaCenter from '~/components/common/cta/CtaCenter.astro';
 import HeroPages from '~/components/common/HeroPages.astro';
 import MainLayout from '~/layouts/MainLayout.astro';
 
 let title = "title",
     description = "description",
     heroImg = 'https://cdn.pixabay.com/photo/2016/12/06/01/26/colour-1885352_960_720.jpg',
-    linkContact = '/design#contact',
-    linkProducts = '/design#products',
     pattern = "pattern-design"
 ---
 
 <MainLayout title={title} description={description}>
-    <HeroPages linkContact={linkContact} linkProducts={linkProducts} heroImg={heroImg} pattern={pattern}>
+    <HeroPages heroImg={heroImg} pattern={pattern}>
         <h2 slot="title" class=" uppercase mb-20 tracking-widest  font-light text-white text-3xl  sm:text-5xl">
             Design is
             <br />
@@ -30,4 +30,6 @@ let title = "title",
             </p>
         </div>
     </HeroPages>
+    <CtaCenter />
+    <ContactSection />
 </MainLayout>

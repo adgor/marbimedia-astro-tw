@@ -1,18 +1,17 @@
 ---
 import ContactSection from '~/components/common/contact/ContactSection.astro';
+import CtaCenter from '~/components/common/cta/CtaCenter.astro';
 import HeroPages from '~/components/common/HeroPages.astro';
 import MainLayout from '~/layouts/MainLayout.astro';
 
 let title = "title",
     description = "description",
     heroImg = "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260",
-    linkContact = '/project-idea#contact',
-    linkProducts = '/project-idea#products',
     pattern = "pattern-web"
 ---
 
 <MainLayout title={title} description={description}>
-    <HeroPages linkContact={linkContact} linkProducts={linkProducts} heroImg={heroImg} pattern={pattern}>
+    <HeroPages heroImg={heroImg} pattern={pattern}>
         <h2 slot="title" class=" uppercase mb-20 tracking-widest  font-light text-white text-3xl  sm:text-5xl">
             We build JAMstack
             <br />
@@ -32,5 +31,6 @@ let title = "title",
         </div>
     </HeroPages>
 
+    <CtaCenter />
     <ContactSection />
 </MainLayout>

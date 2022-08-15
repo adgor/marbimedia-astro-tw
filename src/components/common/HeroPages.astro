@@ -4,11 +4,10 @@ import Button from "./Button.astro";
 export interface Props {
     heroImg: string;
     pattern: string;
-    linkContact: string;
-    linkProducts: string;
+
 }
 
-const { heroImg, pattern, linkContact, linkProducts } = Astro.props
+const { heroImg, pattern, } = Astro.props
 ---
 
 <header class={`bg-brand-richBlack pt-20 ${pattern}`}>
@@ -18,11 +17,10 @@ const { heroImg, pattern, linkContact, linkProducts } = Astro.props
             <div class="mb-auto lg:max-w-lg lg:pr-28">
                 <slot name="heading" />
                 <div class="flex flex-col space-x-1 items-center md:flex-row">
-                    <Button iconSpan=" hidden" link={linkContact}>
+                    <Button iconSpan=" hidden" link="#contact">
                         get started
                     </Button>
-                    <Button iconSpan=" hidden" btnColorStyle=" bg-transparent text-white capitalize"
-                        link={linkProducts}>
+                    <Button iconSpan=" hidden" btnColorStyle=" bg-transparent text-white capitalize" link="#products">
                         learn more
                     </Button>
                 </div>
