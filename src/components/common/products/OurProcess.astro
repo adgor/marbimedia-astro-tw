@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from "astro-icon";
 
 export interface Props {
     title: string;
@@ -7,15 +7,22 @@ export interface Props {
     iconName: string;
 }
 
-const { title, body, iconName } = Astro.props
+const { title, body, iconName } = Astro.props;
 ---
 
-<div class="max-w-md sm:mx-auto">
-    <Icon name={iconName} class="h-10" />
+<div class="max-w-md ">
+    <Icon name={iconName} class="h-10 mb-8" />
 
-    <h6 class="mb-3 text-xl font-bold leading-5">{title}</h6>
-    <p class="mb-3 text-sm text-gray-900">
+    <h6 class="mb-4 text-xl font-bold leading-5 uppercase text-brand-gunmetal">
+        {title}
+    </h6>
+    <p class=" text-brand-charcoal body-w">
         {body}
     </p>
-
 </div>
+
+<style>
+    .body-w {
+        max-width: 340px;
+    }
+</style>

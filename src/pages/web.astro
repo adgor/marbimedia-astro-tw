@@ -21,7 +21,10 @@ let title = "title",
 
 <MainLayout title={title} description={description}>
     <HeroPages heroImg={heroImg} pattern={pattern}>
-        <h2 slot="title" class="mb-20 text-3xl font-light tracking-widest text-white uppercase sm:text-5xl">
+        <h2
+            slot="title"
+            class="mb-20 text-3xl font-light tracking-widest text-white uppercase sm:text-5xl"
+        >
             We build JAMstack
             <br />
             experiences.
@@ -33,39 +36,70 @@ let title = "title",
                 </p>
             </div>
             <p class="pb-4 text-base tracking-wide text-brand-text md:text-lg">
-                We use JAMstack architecture, which is the modern way to build Websites
-                and Apps that delivers better performance, security, and scaling.
+                We use JAMstack architecture, which is the modern way to build
+                Websites and Apps that delivers better performance, security,
+                and scaling.
             </p>
         </div>
     </HeroPages>
 
-    <section id="projects">
-        <CenterSection title="What We Do" />
+    <CenterSection id="products" title="What We Do">
         <main
-            class="px-4 mx-auto divide-y sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:space-y-12 md:divide-y-0 divide-brand-purple divide-opacity-20 lg:space-y-24">
-            <ProductItem prodImgSrc={imgSrc} contentStyle="md:ml-16" title="Jamstack Websites"
+            class="px-24 divide-y md:space-y-12 md:divide-y-0 divide-brand-purple divide-opacity-20 lg:space-y-24"
+        >
+            <ProductItem
+                prodImgSrc={imgSrc}
+                contentStyle="md:ml-16"
+                title="Jamstack Websites"
                 body="We build Jamstack websites and apps to meet the specific needs of your business that off-the-shelf software can't. Jamstack is not a technology or a product. It's a way of thinking that moves the web forward, making it secure, faster, and easier to scale."
-                products="UI, UX, Dev" />
+                products="UI, UX, Dev"
+            />
 
-            <ProductItem prodImgSrc={desingImgSrc} orderItem="md:order-last" contentStyle="md:mr-16" title="Apps & Data"
+            <ProductItem
+                prodImgSrc={desingImgSrc}
+                orderItem="md:order-last"
+                contentStyle="md:mr-16"
+                title="Apps & Data"
                 body="We build applications designed to solve simple or complicated business needs. Our team has created dozens of solutions using all major platforms or creating development-intensive custom solutions."
-                products="Frontend, Backend, Serverless, DevOps" />
+                products="Frontend, Backend, Serverless, DevOps"
+            />
 
-            <ProductItem prodImgSrc={imgSrc} contentStyle="md:ml-16" title="Ecommerce"
+            <ProductItem
+                prodImgSrc={imgSrc}
+                contentStyle="md:ml-16"
+                title="Ecommerce"
                 body="Ecommerce activity has seen an incredible rise over the past two years. We know that making the best online shopping experience is a combination of paying attention to detail and using cutting-edge technology."
-                products="Headless ecommerce, WooCommerce, Shopify" />
+                products="Headless ecommerce, WooCommerce, Shopify"
+            />
         </main>
-    </section>
+    </CenterSection>
 
-    <section id="process">
-        <CenterSection title="pur process." />
-
-        <main class="px-4 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-            <div class="grid items-center gap-8 row-gap-10 px-12 py-16 md:px-24 lg:py-20 lg:grid-cols-2">
-                <OurProcess iconName="mdi:abacus" />
-            </div>
-        </main>
-    </section>
+    <CenterSection title="our process.">
+        <div
+            class="grid grid-cols-1 gap-12 px-12 py-16 md:px-24 md:grid-cols-2 lg:gap-x-36 lg:gap-y-28 "
+        >
+            <OurProcess
+                iconName="mdi:abacus"
+                body="We put our ability to listen first and foremost. Our business analysts and professionals sit down with you to hear your needs."
+                title="Gather Requirements"
+            />
+            <OurProcess
+                iconName="mdi:abacus"
+                body="We put our ability to listen first and foremost. Our business analysts and professionals sit down with you to hear your needs."
+                title="Gather Requirements"
+            />
+            <OurProcess
+                iconName="mdi:abacus"
+                body="We put our ability to listen first and foremost. Our business analysts and professionals sit down with you to hear your needs."
+                title="Gather Requirements"
+            />
+            <OurProcess
+                iconName="mdi:abacus"
+                body="We put our ability to listen first and foremost. Our business analysts and professionals sit down with you to hear your needs."
+                title="Gather Requirements"
+            />
+        </div>
+    </CenterSection>
 
     <CtaCenter />
     <ContactSection />

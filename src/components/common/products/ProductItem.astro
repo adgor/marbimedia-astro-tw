@@ -1,7 +1,7 @@
 ---
-import { Picture } from '@astrojs/image/components'
+import { Picture } from "@astrojs/image/components";
 
-import hero from '~/assets/2.webp'
+import hero from "~/assets/2.webp";
 
 export interface Props {
     title: string;
@@ -10,20 +10,35 @@ export interface Props {
     contentStyle: string;
     orderItem: string;
     prodImgSrc: any;
-
 }
 
-const { title, body, products, prodImgSrc = { hero }, contentStyle = '', orderItem } = Astro.props
+const {
+    title,
+    body,
+    products,
+    prodImgSrc = { hero },
+    contentStyle = "",
+    orderItem,
+} = Astro.props;
 ---
 
-<div class="px-12 py-16 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24">
+<div class="py-16">
     <div class="relative grid overflow-visible md:grid-cols-2 gap-y-8 ">
         <div class={`relative ${orderItem}`}>
-            <Picture src={prodImgSrc} widths={[800]} sizes="(max-width: 640px) 100vw, 50vw" alt="My hero image" />
+            <Picture
+                src={prodImgSrc}
+                widths={[800]}
+                sizes="(max-width: 640px) 100vw, 50vw"
+                alt="My hero image"
+            />
         </div>
-        <div class={`flex flex-col max-w-sm text-brand-gunmetal ${contentStyle}`}>
+        <div
+            class={`flex flex-col max-w-sm text-brand-gunmetal ${contentStyle}`}
+        >
             <div class="mb-6 ">
-                <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">
+                <h2
+                    class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none"
+                >
                     {title}
                 </h2>
                 <p class="text-base product-body-w text-brand-charcoal ">
@@ -31,7 +46,6 @@ const { title, body, products, prodImgSrc = { hero }, contentStyle = '', orderIt
                 </p>
             </div>
             <div class="text-base font-semibold ">
-
                 {products}
             </div>
         </div>
