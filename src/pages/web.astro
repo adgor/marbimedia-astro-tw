@@ -20,6 +20,7 @@ let title = "title",
 ---
 
 <MainLayout title={title} description={description}>
+    <!-- Hero section -->
     <HeroPages heroImg={heroImg} pattern={pattern}>
         <h2
             slot="title"
@@ -43,9 +44,10 @@ let title = "title",
         </div>
     </HeroPages>
 
+    <!-- Products -->
     <CenterSection id="products" title="What We Do">
         <main
-            class="px-24 divide-y md:space-y-12 md:divide-y-0 divide-brand-purple divide-opacity-20 lg:space-y-24"
+            class=" px-8 md:px-24 divide-y md:space-y-12 md:divide-y-0 divide-brand-purple divide-opacity-20 lg:space-y-24"
         >
             <ProductItem
                 prodImgSrc={imgSrc}
@@ -74,6 +76,7 @@ let title = "title",
         </main>
     </CenterSection>
 
+    <!-- Process -->
     <CenterSection
         id="process"
         sectionStyle=" bg-brand-cultured"
@@ -105,6 +108,9 @@ let title = "title",
         </div>
     </CenterSection>
 
+    <!-- CTA -->
     <CtaCenter />
+
+    <!-- Contact -->
     <ContactSection />
 </MainLayout>

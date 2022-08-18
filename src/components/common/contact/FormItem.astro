@@ -6,12 +6,19 @@ export interface Props {
 const { forText } = Astro.props;
 ---
 
-<div class="relative  sm:mt-6">
-    <input placeholder={forText} required type="text"
+<div class="relative  mt-6">
+    <input
+        placeholder={forText}
+        required
+        type="text"
         class="peer  font-bold text-brand-culturedDark placeholder-transparent flex-grow w-full border-b border-brand-text focus:outline-none bg-brand-gunmetal h-12  mb-2  focus:border-brand-culturedDark "
-        id={forText} name={forText} />
-    <label for={forText}
-        class="transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 absolute left-0 -top-3.5 text-sm peer-focus:-top-3.5 peer-focus:text-sm">
+        id={forText}
+        name={forText}
+    />
+    <label
+        for={forText}
+        class="transition-all peer-placeholder-shown:text-base peer-placeholder-shown:top-3 absolute left-0 -top-3.5 text-sm peer-focus:-top-3.5 peer-focus:text-sm"
+    >
         {forText}
     </label>
 </div>
