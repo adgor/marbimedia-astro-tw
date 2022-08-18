@@ -4,12 +4,13 @@ import CtaCenter from "~/components/common/cta/CtaCenter.astro";
 import HeroPages from "~/components/common/HeroPages.astro";
 import ProductItem from "~/components/common/products/ProductItem.astro";
 import MainLayout from "~/layouts/MainLayout.astro";
-
-import jamstackImg from "~/assets/1.jpg";
-import desingImg from "~/assets/2.webp";
 import CenterSection from "~/components/common/CenterSection.astro";
 import OurProcess from "~/components/common/products/OurProcess.astro";
 
+// data && || assets
+import { devProcess } from "~/data/products";
+import jamstackImg from "~/assets/1.jpg";
+import desingImg from "~/assets/2.webp";
 let title = "title",
     description = "description",
     heroImg =
@@ -82,29 +83,14 @@ let title = "title",
         sectionStyle=" bg-brand-cultured"
         title="our process."
     >
+        <!-- list-grid -->
         <div
             class="grid grid-cols-1 gap-12 px-12 pb-16 md:px-56 md:grid-cols-2 lg:gap-x-36 lg:gap-y-28 "
         >
-            <OurProcess
-                iconName="mdi:abacus"
-                body="We put our ability to listen first and foremost. Our business analysts and professionals sit down with you to hear your needs."
-                title="Gather Requirements"
-            />
-            <OurProcess
-                iconName="mdi:abacus"
-                body="We put our ability to listen first and foremost. Our business analysts and professionals sit down with you to hear your needs."
-                title="Gather Requirements"
-            />
-            <OurProcess
-                iconName="mdi:abacus"
-                body="We put our ability to listen first and foremost. Our business analysts and professionals sit down with you to hear your needs."
-                title="Gather Requirements"
-            />
-            <OurProcess
-                iconName="mdi:abacus"
-                body="We put our ability to listen first and foremost. Our business analysts and professionals sit down with you to hear your needs."
-                title="Gather Requirements"
-            />
+            <!-- Process Items -->
+            {devProcess.map(({ title, body, iconName }) => (
+                <OurProcess iconName={iconName} title={title} body={body} />
+            ))}
         </div>
     </CenterSection>
 
