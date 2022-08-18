@@ -1,6 +1,6 @@
 module.exports = {
-	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
- theme: {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  theme: {
     extend: {
       colors: {
         primary: "var(--color-primary)",
@@ -32,6 +32,6 @@ module.exports = {
         default: "var(--color-border)",
       },
     },
-  },	
-	plugins: [],
+  },
+  plugins: [require("prettier-plugin-tailwindcss")],
 };
