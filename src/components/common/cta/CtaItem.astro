@@ -3,7 +3,7 @@ import Button from "../Button.astro";
 
 export interface Props {
     bgStyle?: string;
-    ctaTitleFirst?: string;
+    ctaTitleFirst?: any;
     ctaTitleSecond?: string;
     ctaDesc?: string;
     titleStyle?: string;
@@ -24,14 +24,19 @@ const {
     btnStyle = ``,
     btnText = ``,
 } = Astro.props;
-
 ---
 
 <section class={bgStyle}>
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="flex flex-col space-y-8  lg:flex-row items-center justify-between">
+    <div
+        class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
+        <div
+            class="flex flex-col items-center justify-between space-y-10 lg:space-y-0 lg:flex-row"
+        >
             <div class="space-y-5 ">
                 <h2 class={`${titleStyle} text-2xl`}>
+                    <!-- title with slot or prop -->
+                    <slot name="title" />
                     {ctaTitleFirst}
                     <br />
                     {ctaTitleSecond}

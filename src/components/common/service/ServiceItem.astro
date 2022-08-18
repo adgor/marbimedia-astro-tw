@@ -18,7 +18,7 @@ export interface Props {
 }
 
 const {
-    bgStyle,
+    bgStyle = "",
     serviceText,
     serviceTitleFirst,
     serviceTitleSecond,
@@ -31,19 +31,22 @@ const {
     serviceImgAlt,
     btnColorStyle,
     btnLink,
-} = Astro.props
+} = Astro.props;
 ---
 
-<section class={`${bgStyle}`}>
-
-    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="grid gap-5 row-gap-8 lg:grid-cols-2">
-            <div class="flex flex-col justify-center">
-                <div class="max-w-xl text-brand-gunmetal  mb-6">
+<div class={`${bgStyle}`}>
+    <div
+        class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+    >
+        <div class="grid gap-12 lg:gap-5 lg:grid-cols-2">
+            <div class="flex flex-col justify-center space-y-12">
+                <div class="max-w-xl text-brand-gunmetal">
                     <p class="mb-2 text-sm font-semibold leading-5 uppercase ">
                         {serviceText}
                     </p>
-                    <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none">
+                    <h2
+                        class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none"
+                    >
                         {serviceTitleFirst}
                         <br class="hidden md:block" />
                         {serviceTitleSecond}
@@ -52,11 +55,14 @@ const {
                         {serviceDesc}
                     </p>
                 </div>
-                <div class=" text-brand-gunmetal grid gap-5 row-gap-8 sm:grid-cols-2">
-                    <div class=" border-l-4 shadow-sm border-brand-purple">
+                <div
+                    class="grid gap-6 lg:gap-5 text-brand-gunmetal sm:grid-cols-2"
+                >
+                    <div class="border-l-4 shadow-sm border-brand-purple">
                         <div
-                            class="h-full p-5 border border-l-0 rounded-r transition-colors duration-700 hover:border-brand-lavenderFloral">
-                            <h6 class="mb-2 uppercase font-semibold leading-5">
+                            class="h-full p-5 transition-colors duration-700 border border-l-0 rounded-r hover:border-brand-lavenderFloral"
+                        >
+                            <h6 class="mb-2 font-semibold leading-5 uppercase">
                                 {itemFirstTitle}
                             </h6>
                             <p class="text-sm text-brand-charcoal ">
@@ -66,8 +72,9 @@ const {
                     </div>
                     <div class="border-l-4 shadow-sm border-brand-purple">
                         <div
-                            class="h-full p-5 border border-l-0 rounded-r transition-colors duration-700 hover:border-brand-lavenderFloral">
-                            <h6 class="mb-2 font-semibold uppercase leading-5">
+                            class="h-full p-5 transition-colors duration-700 border border-l-0 rounded-r hover:border-brand-lavenderFloral"
+                        >
+                            <h6 class="mb-2 font-semibold leading-5 uppercase">
                                 {itemSecondTitle}
                             </h6>
                             <p class="text-sm text-brand-charcoal">
@@ -76,15 +83,19 @@ const {
                         </div>
                     </div>
                 </div>
-                <div class=" mt-8">
+                <div class="">
                     <Button link={btnLink} btnColorStyle={btnColorStyle}>
                         learn more
                     </Button>
                 </div>
             </div>
             <div>
-                <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96" src={serviceImg} alt={serviceImgAlt} />
+                <img
+                    class="object-cover w-full h-56 rounded shadow-lg sm:h-96"
+                    src={serviceImg}
+                    alt={serviceImgAlt}
+                />
             </div>
         </div>
     </div>
-</section>
+</div>
