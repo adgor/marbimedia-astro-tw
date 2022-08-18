@@ -1,35 +1,104 @@
 ---
-import ContactSection from '~/components/common/contact/ContactSection.astro';
-import CtaCenter from '~/components/common/cta/CtaCenter.astro';
-import HeroPages from '~/components/common/HeroPages.astro';
-import MainLayout from '~/layouts/MainLayout.astro';
+import CenterSection from "~/components/common/CenterSection.astro";
+import ContactSection from "~/components/common/contact/ContactSection.astro";
+import CtaCenter from "~/components/common/cta/CtaCenter.astro";
+import HeroPages from "~/components/common/HeroPages.astro";
+import ProductItem from "~/components/common/products/ProductItem.astro";
+import MainLayout from "~/layouts/MainLayout.astro";
 
+// data && || assets
+import { designProcess } from "~/data/products";
+import desingImg from "~/assets/2.webp";
+import OurProcess from "~/components/common/products/OurProcess.astro";
 let title = "title",
     description = "description",
-    heroImg = 'https://cdn.pixabay.com/photo/2016/12/06/01/26/colour-1885352_960_720.jpg',
-    pattern = "pattern-design"
+    heroImg =
+        "https://cdn.pixabay.com/photo/2016/12/06/01/26/colour-1885352_960_720.jpg",
+    pattern = "pattern-design";
 ---
 
 <MainLayout title={title} description={description}>
+    <!-- Hero section -->
     <HeroPages heroImg={heroImg} pattern={pattern}>
-        <h2 slot="title" class=" uppercase mb-20 tracking-widest  font-light text-white text-3xl  sm:text-5xl">
+        <h2
+            slot="title"
+            class="mb-20 text-3xl font-light tracking-widest text-white uppercase sm:text-5xl"
+        >
             Design is
             <br />
             how it works.
         </h2>
-        <div slot="heading" class=" relative max-w-md  text-white mb-6">
-
+        <div slot="heading" class="relative max-w-md mb-6 text-white ">
             <div>
-                <p class="inline-block pb-7 text-2xl font-medium  uppercase">
+                <p class="inline-block text-2xl font-medium uppercase pb-7">
                     UX & UI DESIGN
                 </p>
             </div>
-            <p class="text-base tracking-wide text-brand-text pb-4 md:text-lg">
-                We provide the smart design, backed by the right technology, as the basis for the most impressive user
-                experiences.
+            <p class="pb-4 text-base tracking-wide text-brand-text md:text-lg">
+                We provide the smart design, backed by the right technology, as
+                the basis for the most impressive user experiences.
             </p>
         </div>
     </HeroPages>
+
+    <!-- Products -->
+    <CenterSection id="products" title="Stuff we design.">
+        <main
+            id="product-items"
+            class="px-8 space-y-12 sec-order md:px-24 lg:space-y-24"
+        >
+            <ProductItem
+                prodImgSrc={desingImg}
+                contentStyle="md:ml-16"
+                title="Web Apps."
+                body="Web applications and design systems including typography, grid systems, buttons, menus, sidebars, and more. We design the pieces to build your software more usable and beautiful than ever."
+            />
+
+            <ProductItem
+                prodImgSrc={desingImg}
+                orderItem="md:order-last"
+                contentStyle="md:mr-16"
+                title="Mobile apps."
+                body="iOS, iPadOS and Android apps are our home turf because we use them every day. We unleash our creativity to design the most usable and attractive mobile experiences on the planet."
+            />
+
+            <ProductItem
+                prodImgSrc={desingImg}
+                contentStyle="md:ml-16"
+                title="Make old apps better."
+                body="Probably one of the most satisfying things for us is to take a step back and see how we have improved software that was confusing, ugly, and unusable into something far better."
+            />
+
+            <ProductItem
+                prodImgSrc={desingImg}
+                orderItem="md:order-last"
+                contentStyle="md:mr-16"
+                title="Badass websites."
+                body="Monogram has designed and developed hundreds of world-class web experiences with a quality that's on par or exceeding that of marketing and branding agencies. Our design just works."
+            />
+        </main>
+    </CenterSection>
+
+    <!-- Process -->
+    <CenterSection
+        id="process"
+        sectionStyle=" bg-brand-cultured"
+        title="our process."
+    >
+        <!-- list-grid -->
+        <div
+            class="grid grid-cols-1 gap-12 px-12 pb-16 md:px-56 md:grid-cols-2 lg:gap-x-36 lg:gap-y-28"
+        >
+            <!-- Process Items -->
+            {designProcess.map(({ title, body, iconName }) => (
+                <OurProcess iconName={iconName} title={title} body={body} />
+            ))}
+        </div>
+    </CenterSection>
+
+    <!-- CTA -->
     <CtaCenter />
+
+    <!-- Contact -->
     <ContactSection />
 </MainLayout>
