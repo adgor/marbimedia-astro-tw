@@ -11,11 +11,10 @@ import ContactSection from "~/components/common/contact/ContactSection.astro";
 let title = "home";
 let description =
 	"MarbiMedia is a digital agency designing and developing the best websites, projects and experiences.";
-let secStyle = "pt-20 bg-brand-richBlack";
 ---
 
 <MainLayout title={title} description={description}>
-	<Hero secStyle={secStyle}>
+	<Hero secStyle="pt-20 bg-brand-richBlack">
 		<div class="max-w-xl mb-8" slot="heading">
 			<h2
 				class="max-w-lg mb-6 text-3xl font-bold leading-none text-brand-culturedDark sm:text-5xl"
@@ -56,6 +55,7 @@ let secStyle = "pt-20 bg-brand-richBlack";
 			itemFirstDesc="Statically generated websites and apps are faster. Dont't wait for a server to build- deploy your apps onto a CDN."
 			itemSecondTitle="more secure"
 			itemSecondDesc="By transforming server-side process into serverless functions, the surface area for vulnerabilities is reduces."
+			orderItem="order-first lg:order-last"
 			serviceImg="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
 			btnLink="/web"
 			btnColorStyle=" bg-brand-culturedDark"
@@ -71,6 +71,7 @@ let secStyle = "pt-20 bg-brand-richBlack";
 			itemFirstDesc="Users always come first in every interaction, which means extensive user research is a must."
 			itemSecondTitle="dissciplined"
 			itemSecondDesc="We follow solid principles to design products that stay attractive and usable for years to come."
+			orderItem="order-first lg:order-last"
 			serviceImg="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
 			serviceImgAlt="Service img"
 			btnLink="/design"
@@ -86,6 +87,7 @@ let secStyle = "pt-20 bg-brand-richBlack";
 			itemFirstDesc="Users always come first in every interaction, which means extensive user research is a must."
 			itemSecondTitle="dissciplined"
 			itemSecondDesc="We follow solid principles to design products that stay attractive and usable for years to come."
+			orderItem="order-first lg:order-last"
 			serviceImg="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"
 			btnLink="/project-idea"
 			btnColorStyle=" bg-brand-culturedDark"

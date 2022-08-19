@@ -15,6 +15,7 @@ export interface Props {
     serviceImgAlt: string;
     btnColorStyle: string;
     btnLink: string;
+    orderItem: string;
 }
 
 const {
@@ -31,6 +32,7 @@ const {
     serviceImgAlt,
     btnColorStyle,
     btnLink,
+    orderItem,
 } = Astro.props;
 ---
 
@@ -89,7 +91,7 @@ const {
                     </Button>
                 </div>
             </div>
-            <div>
+            <div class={orderItem}>
                 <img
                     class="object-cover w-full h-56 rounded shadow-lg sm:h-96"
                     src={serviceImg}
