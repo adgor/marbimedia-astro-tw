@@ -1,12 +1,53 @@
 ---
-import MainLayout from '~/layouts/MainLayout.astro';
+import ContactSection from "~/components/common/contact/ContactSection.astro";
+import CtaCenter from "~/components/common/cta/CtaCenter.astro";
+import HeroPages from "~/components/common/HeroPages.astro";
+import MainLayout from "~/layouts/MainLayout.astro";
 
 let title = "title",
-    description = "description"
+    description = "description",
+    heroImg =
+        "https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260";
 ---
 
 <MainLayout title={title} description={description}>
-    <div class=" py-32">
-        <h1>TODO </h1>
-    </div>
+    <HeroPages heroImg={heroImg} pattern="pattern-about" showBtn="hidden">
+        <h2
+            slot="title"
+            class="relative mb-20 text-2xl font-light tracking-widest text-white uppercase md:tracking-wider title-w md:w-screen sm:text-5xl"
+        >
+            We build Projects that deliver
+            <br class="hidden md:block " />
+            real business results.
+        </h2>
+        <div slot="heading" class="relative max-w-md mb-6 text-white ">
+            <div>
+                <p class="inline-block text-xl font-medium uppercase pb-7">
+                    WEBSITES & WEB APPS
+                </p>
+            </div>
+            <p class="pb-4 text-base tracking-wide text-brand-text md:text-lg">
+                We use JAMstack architecture, which is the modern way to build
+                Websites and Apps that delivers better performance, security,
+                and scaling.
+            </p>
+        </div>
+    </HeroPages>
+
+    <!-- CTA -->
+    <CtaCenter />
+
+    <!-- Contact -->
+    <ContactSection />
 </MainLayout>
+
+<style>
+    .title-w {
+        max-width: 250px;
+    }
+    @media (min-width: 768px) {
+        .title-w {
+            max-width: 100%;
+        }
+    }
+</style>

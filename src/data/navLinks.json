@@ -1,18 +1,14 @@
 [
-    {
-        "title": "portfolio",
-        "url": "/portfolio"
-    },
-    {
-        "title": "about",
-        "url": "/about"
-    },
-    {
-        "title": "open source",
-        "url": "/open-source"
-    },
-    {
-        "title": "contact",
-        "url": "#contact"
-    }
+  {
+    "title": "portfolio",
+    "url": "/portfolio"
+  },
+  {
+    "title": "about",
+    "url": "/about"
+  },
+  {
+    "title": "contact",
+    "url": "#contact"
+  }
 ]
