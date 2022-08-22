@@ -1,4 +1,6 @@
 ---
+import AboutUs from "~/components/about/AboutUs.astro";
+import WhyUs from "~/components/about/WhyUs.astro";
 import ContactSection from "~/components/common/contact/ContactSection.astro";
 import CtaCenter from "~/components/common/cta/CtaCenter.astro";
 import HeroPages from "~/components/common/HeroPages.astro";
@@ -21,21 +23,23 @@ let title = "title",
             real business results.
         </h2>
         <div slot="heading" class="relative max-w-md mb-6 text-white ">
-            <div>
-                <p class="inline-block text-xl font-medium uppercase pb-7">
-                    WEBSITES & WEB APPS
-                </p>
-            </div>
             <p class="pb-4 text-base tracking-wide text-brand-text md:text-lg">
-                We use JAMstack architecture, which is the modern way to build
-                Websites and Apps that delivers better performance, security,
-                and scaling.
+                We work closely together with our clients to build experiences
+                that make an impact.
             </p>
         </div>
     </HeroPages>
 
+    <!-- about us -->
+    <AboutUs />
+
+    <!-- why us -->
+    <WhyUs />
+
     <!-- CTA -->
-    <CtaCenter />
+    <CtaCenter>
+        <h2 slot="miri">kot ekot</h2>
+    </CtaCenter>
 
     <!-- Contact -->
     <ContactSection />
