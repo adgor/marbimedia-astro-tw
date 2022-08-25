@@ -47,7 +47,7 @@ import socialNavLinks from "~/data/socialNavLinks.json";
                             </a>
 
                             <div
-                                class="absolute hidden h-auto max-w-lg dropdown-menu group-hover:inline-block"
+                                class="absolute invisible h-auto max-w-lg dropdown-menu group-hover:visible transition-opacity opacity-0 duration-700 group-hover:opacity-100"
                             >
                                 <div
                                     class="inline-block w-16 ml-6 -mb-2 overflow-hidden"
@@ -63,7 +63,7 @@ import socialNavLinks from "~/data/socialNavLinks.json";
                                 >
                                     {serviceNavLinks.map(({ title, url }) => (
                                         <a
-                                            class="p-3 -m-3 font-medium rounded hover:bg-brand-cultured "
+                                            class="-m-3 rounded p-3 font-medium hover:bg-brand-cultured "
                                             href={url}
                                         >
                                             {title}
@@ -75,7 +75,7 @@ import socialNavLinks from "~/data/socialNavLinks.json";
                         </div>
                     </li>
                     {navLinks.map(({ title, url }) => (
-                        <li class="text-gray-300 transition duration-300 cursor-pointer hover:text-white">
+                        <li class="cursor-pointer text-gray-300 transition duration-300 hover:text-white">
                             <a class="text-sm" href={url}>
                                 {title}
                             </a>
