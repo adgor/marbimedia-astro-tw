@@ -1,3 +1,23 @@
+---
+const reasons = [
+    {
+        title1: "who we",
+        title2: "work with",
+        body: "We love working with ambitious entrepreneurs and dynamic marketing directors. We’re purposefully selective about who we work with – businesses that want to stand out and also stand for something.",
+    },
+    {
+        title1: "an extension",
+        title2: "of your team",
+        body: "We don’t operate as a “service provider”, we get stuck in, we go the extra mile and when we have to, we burn the midnight oil. As an extension of your team, we will help you to strategise and overcome any marketing and business growth challenge.",
+    },
+    {
+        title1: "proven",
+        title2: "Track Record",
+        body: "We have a proven track record of growing businesses. to propel your business forward. We are plain speaking and we’ll tell you how to grow your business in a language you can understand.",
+    },
+];
+---
+
 <div
     class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
 >
@@ -9,8 +29,8 @@
                 >
                     about
                 </h2>
-                <p class="text-base text-gray-700 md:text-xl">
-                    Working with SuperFriendly is a quick and effective way to
+                <p class="text-base text-brand-charcoal md:text-xl">
+                    Working with MarbiMedia is a quick and effective way to
                     level up your team’s design system prowess. We bring
                     bajillions of years of experience to teaching product teams
                     how to work at scale through fun and functional design
@@ -18,33 +38,18 @@
                 </p>
             </div>
             <div class="grid mt-8 gap-8 row-gap-8 sm:grid-cols-3">
-                <div>
-                    <h6 class="mb-2 font-semibold leading-5">
-                        I'll be sure to note that in my log
-                    </h6>
-                    <p class="text-sm text-gray-900">
-                        Dingy I'm tellin' you rhubaahb Bangah Jo-Jeezly got in a
-                        gaum Powrtland stove up dooryahd
-                    </p>
-                </div>
-                <div>
-                    <h6 class="mb-2 font-semibold leading-5">
-                        I'll be sure to note that in my log
-                    </h6>
-                    <p class="text-sm text-gray-900">
-                        Dingy I'm tellin' you rhubaahb Bangah Jo-Jeezly got in a
-                        gaum Powrtland stove up dooryahd
-                    </p>
-                </div>
-                <div>
-                    <h6 class="mb-2 font-semibold leading-5">
-                        I'll be sure to note that in my log
-                    </h6>
-                    <p class="text-sm text-gray-900">
-                        Dingy I'm tellin' you rhubaahb Bangah Jo-Jeezly got in a
-                        gaum Powrtland stove up dooryahd
-                    </p>
-                </div>
+                {reasons.map(({ title1, title2, body }) => (
+                    <div>
+                        <h6 class="mb-2 font-bold capitalize leading-5 text-brand-gunmetal">
+                            {title1}
+                            <br />
+                            <span class=" font-medium">
+                                {title2} 'change font'
+                            </span>
+                        </h6>
+                        <p class="text-sm text-brand-charcoal">{body}</p>
+                    </div>
+                ))}
             </div>
         </div>
     </div>
